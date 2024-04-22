@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neumorphism Calculator</title>
+    <title>Kalkulator Sakti</title>
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -154,7 +154,7 @@
                 </button>
                 <button class="btn">0</button>
                 <button class="btn">.</button>
-                <button id="eval" onclick="evaluate()">=</button>
+                <button id="eval" onclick="screen.value=eval(screen.value)">=</button>
                 <button class="btn">+</button>
             </div>
 
@@ -201,13 +201,16 @@
     }
 
     function log() {
-        var num = parseFloat(screen.value);
-        if (num > 0) {
-            screen.value = Math.log(num);
-        } else {
-            screen.value = "Error";
-        }
+    var base = parseFloat(prompt("Enter the base:"));
+    var num = parseFloat(prompt("Enter the number:"));
+    
+    if (base <= 0 || num <= 0) {
+        screen.value = "Invalid input"; // Logarithm of non-positive numbers is undefined
+    } else {
+        screen.value = Math.log(num) / Math.log(base);
+        screen.value = Math.ceil(screen.value);
     }
+}
 
     function pi() {
         screen.value = Math.PI;
@@ -234,15 +237,13 @@
         screen.value = screen.value.substr(0, screen.value.length - 1);
     }
 
-    function evaluate() {
-        screen.value = eval(screen.value);
-    }
+  
     function pow() {
         var base = parseFloat(prompt("Enter the base:"));
         var exponent = parseFloat(prompt("Enter the exponent:"));
         var result = Math.pow(base, exponent);
         screen.value = result;}
-
+        
     // Quadratic Function Calculation
     function quadratic() {
         var a = parseFloat(prompt("Enter the value of coefficient a:"));
@@ -265,6 +266,13 @@
             screen.value = `x1 = ${realPart} + ${imaginaryPart}i, x2 = ${realPart} - ${imaginaryPart}i`;
         }
     }
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            alert("Gunakan tombol '=' untuk mengkalkulasi.");
+        }
+    });
 </script>
 
 </html>
