@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sine Wave Graph</title>
+<style>
+    #graph {
+        width: 600px;
+        height: 400px;
+        border: 1px solid #ccc;
+        position: relative;
+        margin: 50px auto;
+    }
+
+    .point {
+        width: 8px;
+        height: 8px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        pointer-events: none;
+        display: none;
+    }
+
+    .line {
+        stroke: blue;
+        stroke-width: 2;
+        fill: none;
+    }
+
+    .coordinate-text {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 5px;
+        border-radius: 5px;
+        pointer-events: none;
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<svg id="graph"></svg>
+
+<script>
+    const svg = document.getElementById('graph');
+    const points = [];
+
+    // Function to draw the sine wave
+    function drawSineWave() {
+        const width = svg.clientWidth;
+        const height = svg.clientHeight;
+        const amplitude = height / 2;
+        const frequency = 0.03;
+        const phaseShift = 0;
+
+        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        let d = `M0 ${amplitude}`;
+
+        for (let x = 0; x <= width; x += 5) {
+            const angle = (x / width) * 2 * Math.PI; // Convert x to angle in radians
+            const y = amplitude * Math.sin(angle); // Calculate y using sine function
+            d += ` L${x} ${amplitude - y}`; // Invert y to match SVG coordinate system
+            const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            point.setAttribute('class', 'point');
+            point.setAttribute('cx', x);
+            point.setAttribute('cy', amplitude - y); // Invert y to match SVG coordinate system
+            point.setAttribute('r', '4');
+            svg.appendChild(point);
+            points.push(point);
+        }
+
+        path.setAttribute('class', 'line');
+        path.setAttribute('d', d);
+        svg.appendChild(path);
+    }
+
+    // Function to handle hover events
+    function handleHover(event) {
+        const mouseX = event.clientX - svg.getBoundingClientRect().left;
+        const mouseY = event.clientY - svg.getBoundingClientRect().top;
+
+        let nearestPoint = null;
+        let minDistance = Infinity;
+        points.forEach(point => {
+            const x = parseFloat(point.getAttribute('cx'));
+            const y = parseFloat(point.getAttribute('cy'));
+            const distance = Math.sqrt((x - mouseX) ** 2 + (y - mouseY) ** 2);
+            if (distance < minDistance) {
+                minDistance = distance;
+                nearestPoint = point;
+            }
+        });
+
+        const angle = (nearestPoint.getAttribute('cx') / svg.clientWidth) * 360; // Convert x to angle in degrees
+        const sinValue = parseFloat((nearestPoint.getAttribute('cy') - svg.clientHeight / 2) / (svg.clientHeight / 2)).toFixed(2); // Calculate sin value
+
+        nearestPoint.style.display = 'block';
+        nearestPoint.setAttribute('data-coords', `(Angle: ${angle.toFixed(2)}°, Sin Value: ${sinValue})`);
+    }
+
+    // Function to hide coordinates on mouseout
+    function handleMouseOut() {
+        points.forEach(point => {
+            point.style.display = 'none';
+        });
+    }
+
+    // Event listeners
+    svg.addEventListener('mousemove', handleHover);
+    svg.addEventListener('mouseout', handleMouseOut);
+
+    // Draw the sine wave on page load
+    drawSineWave();
+</script>
+</body>
+</html>

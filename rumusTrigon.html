@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>3gonomAsik</title>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    </head>
+
+    <body>
+      <div class="sticky-sm-top">
+        <nav class="navbar navbar-expand-lg " style="background-color:#892c28;">
+          <div class="container-fluid ms-1 d-flex align-items-center">
+              <div class="navbarLogo">
+                  <a class="navbar-brand-no-gap" href="Jomepage/homepage.html"><img src="img/3logo.png" alt="Logo" class="logonavbar me-4"> </a>
+              </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse " id="navbarScroll">
+              <ul class="navbar-nav justify-content-start me-auto my-2 my-lg-0 navbar-nav-scroll nav-underline" style="--bs-scroll-height: 100px;">
+
+                <li class="nav-item ">
+                  <a class="nav-link text-white" aria-current="page" href="Jomepage/homepage.html">Home</a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Materi</a>
+                  <ul class="dropdown-menu" style="background-color: #ff8478;">
+                    <li><a class="dropdown-item text-black"  href="sejarahtrigon.html">Sejarah Trigonometri</a></li>
+                    <li><a class="dropdown-item text-black" href="perbandingantrigonometri.html">Perbandingan Trigonometri</a></li>
+                    <li><a class="dropdown-item text-black"  href="grafik.html">Grafik Trigonometri</a></li>
+                    <li><a class="dropdown-item text-black" href="sudutBerelasi.html">Sudut berelasi</a></li>
+                    <li><a class="dropdown-item text-black" style="background-color: #e6e1dd;" href="rumusTrigon.html">Rumus Trigonometri</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-black" href="KalCi/calci.html" target="_blank">Kalkulator Sakti</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="https://drive.google.com/drive/folders/1OvPkRbm6r6tsMaRaORjv5njS_tx8Tejx" target="_blank">E-Book</a>
+                </li>
+                
+                <div class="aboutus">
+                  <li class="nav-item">
+                    <a class="nav-link  text-white opacity-75 " aria-disabled="true"  href="aboutUs.html">About Us</a>
+                  </li>              
+                </div>
+                
+              </ul>
+              <!-- <div class="container mt-2"> -->
+                  <form class="d-flex mt-2 mb-3 gap-2 " role="search" >
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-warning" type="submit">Search</button>
+                    </form>
+              <!-- </div> -->
+              
+            </div>
+          </div>
+
+        </nav>
+      </div>
+      <!-- <p class="card-text">Beliau melahirkan trigonometri untuk level yang lebih tinggi. Orang pertama yang menyusun tabel cotangen. Selain itu, juga menguraikan ke tingkat tertentu sejumlah hubungan trigonometri dan penggunaan sinus dalam perhitungan dan sebagian dari garis singgung. Dalam matematika, Al-Battani menghasilkan sejumlah persamaan trigonometri dan menggunakan gagasan Al-Marwazi tentang tangen dalam mengembangkan persamaan-persamaan untuk menghitung tangen, cotangen, dan menyusun tabel perhitungan tangen. Beliau juga menemukan fungsi kebalikan dari garis potong dan cosecan, dan menghasilkan tabel pertama cosecan, yang disebut sebagai "tabel bayangan" (merujuk pada bayangan gnomon ), untuk setiap gelar dari 1° sampai 90°. Salah satu pencapaiannya yang terkenal adalah penentuan tahun matahari sebagai 365 hari, 5 jam, 46 menit, dan 24 detik.</p> -->
+
+      <div class="containerer-sm">
+        <div class="p-5">
+          <div class="perbandingan3gnom ms-2">
+            <h3 style="font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bold;" class="text-start">E. Rumus-Rumus Trigonometri</h3><br>
+            <ul style="list-style-type: circle;" class="fs-4">
+                <li>Identitas Trigonometri</li>
+                <div class="container fs-5">
+                    <div class="row mt-2">
+                      <div data-aos="zoom-out-right" data-aos-duration="1000" class="col-sm-6">
+                        <ol type="a">
+                            <li >Hubungan Teorema Phytagoras</li>
+                                <ul style="list-style-type: none;">
+                                    <li>sin<sup>2 </sup>α + cos<sup>2 </sup>α = 1</li>
+                                    <li>1 + tan<sup>2 </sup>α = sec<sup>2 </sup>α</li>
+                                    <li>1 + cot<sup>2 </sup>α = cosec<sup>2 </sup>α</li>
+                                </ul><br>
+                            <li>Hubungan Perbandingan</li>
+                                <ul style="list-style-type: none;">
+                                    <li>
+                                        tan α = 
+                                        <div class="frac">
+                                            <span>sin α</span>
+                                            <span class="symbol">/</span>
+                                            <span class="bottom">cos α</span>
+                                          </div>
+                                    </li>
+                                    <li>
+                                        cot α =
+                                        <div class="frac">
+                                            <span>cos α</span>
+                                            <span class="symbol">/</span>
+                                            <span class="bottom">sin α</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                        </ol>
+
+                      </div>
+                      <div data-aos="zoom-out-left" data-aos-duration="1000" class="col-sm-6">
+                        <ol style="list-style-type: none;">
+                            <li>c. Sudut Rangkap</li>
+                            <ul style="list-style-type:none;">
+                                <li>
+                                    sin 2α = 2 sin α cos α
+                                </li>
+                                <li>
+                                    cos 2α = cos<sup>2 </sup>α - sin<sup>2 </sup>α = 1 - 2 sin<sup>2 </sup>α = 2 cos<sup>2 </sup>α - 1
+                                </li>
+                                <li>
+                                    tan 2α = 
+                                    <div class="frac">
+                                        <span>2 tan α</span>
+                                        <span class="symbol">/</span>
+                                        <span class="bottom">1 - tan<sup>2 </sup>α</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    cot 2α =
+                                    <div class="frac">
+                                        <span>cot<sup>2 </sup>α - 1</span>
+                                        <span class="symbol">/</span>
+                                        <span class="bottom">2 cot α</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    sin 3α = 3 sinα - 4 sin<sup>3 </sup>α
+                                </li>
+                                <li>
+                                    cos 3α = 4 cos<sup>3 </sup>α - 3 cos α 
+                                </li>
+                            </ul>
+                            
+                        </ol>
+                      </div>
+                    </div>
+                
+                </div> <br>
+
+                <li>Jumlah dan Selisih Dua Sudut</li>
+                    <img data-aos="fade-right" data-aos-duration="1000" src="img/jnsSudut.png" class="rounded  d-block img-fluid" style="width:30%;"><br>
+
+                    
+                <li>Perkalian Trigonometri</li>
+                <img data-aos="fade-left" data-aos-duration="1000" src="img/perkalianTrigon.jpg" class="rounded  d-block img-fluid" style="width:30%;"><br>
+
+                <li>Jumlah dan Selisih Trigonometri</li>
+                <img data-aos="fade-right" data-aos-duration="1000" src="img/jnsTrigon.jpg" class="rounded  d-block img-fluid" style="width:40%;"> <br>
+                <li>Setengah Sudut</li>
+                <img data-aos="fade-left" data-aos-duration="1000" src="img/setengahSudut.jpg" class="rounded  d-block img-fluid" style="width:40%;"> <br>
+
+            </ul>
+            
+          <div style="display: flex; justify-content: center;">
+            <a href="KalCi/calci.html" class="grafik fs-5" target="_blank">Kalkulator</a>
+          </div>
+        </div>
+      </div>
+
+        
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var navbar = document.querySelector(".navbar");
+                
+                window.addEventListener("scroll", function() {
+                    if (window.scrollY > 10) {
+                        navbar.style.opacity = "0.8";
+                    } else {
+                        navbar.style.opacity = "1";
+                    }
+                });
+            });
+        </script>
+        
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+
+    </body>
+</html>

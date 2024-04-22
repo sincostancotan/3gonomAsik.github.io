@@ -1,0 +1,206 @@
+/* // Custom.scss
+/* // Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available) */
+
+/* @import "../node_modules/bootstrap/scss/bootstrap"; */
+
+/* // Then add additional custom code here */
+/* $colors: (
+"blue":       $blue,
+"indigo":     $indigo,
+"purple":     $purple,
+"pink":       $pink,
+"red":        $red,
+"orange":     $orange,
+"yellow":     $yellow,
+"green":      $green,
+"teal":       $teal,
+"cyan":       $cyan,
+"black":      $black,
+"white":      $white,
+"gray":       $gray-600,
+"gray-dark":  $gray-800
+);
+.navbar{
+  color: $blue;
+  } */ 
+/* Default styles for the navbar */
+/* .navbar {
+  margin: 0;
+  padding: 0;
+} */
+
+/* Styles for screens with a width of 768 pixels or less */
+@media (max-width: 768px) {
+  .navbar {
+    margin: 5px;
+    padding: 5px;
+  }
+}
+
+/* Styles for screens with a width of 576 pixels or less */
+@media (max-width: 576px) {
+  .navbar {
+    margin: 2px;
+    padding: 2px;
+  }
+}
+/* .navbarLogo{
+  back: cyan;
+} */
+/* .container{
+  background-image: url("img/3gonomlogo-removebg.png");
+  
+} */
+
+.nav-tem{
+  margin-top: auto;
+}
+/* .cihuy{
+  position: fixed;
+} */
+
+.logo{
+  margin:0;
+  
+}
+.logonavbar{
+  height:50px;
+  width: auto;
+  transition: .3s ease 0s;
+}
+
+.logonavbar:hover{
+  transform: rotate(-4deg);
+}
+
+.containerer-sm{
+  background-image: url(img/background3.png);
+  background-color: rgba(255, 255, 255, );
+  background-position: left;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 100%;
+  width: 100%;
+}
+
+.aboutus{
+  cursor: pointer;
+  transition: .2s ease 0s;
+}
+/* .aboutus:hover{
+  transform: rotate(5deg); 
+} */
+
+.judulPengertian{
+  color:red;
+  text-shadow: 5px 3px 5px tomato;
+  text-transform: uppercase;
+  font-family: "Platypi", serif;
+}
+
+.col-9{
+  position: right;
+}
+
+.card-text{
+  text-align: justify;
+}
+
+.perbandinganTrigon{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow */
+  display: block;
+  /* Ensures the image is displayed as a block element */
+  margin: 0 auto;
+
+}
+
+.slider{
+  position: relative;
+  width: 100%;
+  height:370px;
+  overflow: hidden;
+  /* display: flex; */
+  overflow-x: hidden;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+}
+
+.item{
+  /* flex: 0 0 auto; */
+  position:absolute;
+  text-align: justify;
+  width: 200px;
+  height: 50%;
+  transition: .5s ease;
+  left: calc(50%);
+  background-color: #e6e1dd;
+  border-radius: 20px;
+  padding: 20px;
+  left: calc(50% -110px);
+  top: 0;
+}
+
+.frac {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  letter-spacing: 0.001em;
+  text-align: center;
+}
+.frac > span {
+  display: block;
+  padding: 0.1em;
+}
+.frac span.bottom {
+  border-top: thin solid black;
+}
+.frac span.symbol {
+  display: none;
+}
+
+#next, #prev{
+  position:absolute;
+  top:20%;
+  font-weight: bold;
+  color: black;
+  border: none;
+  background-color: transparent ;
+  font-size: xx-large;
+  left: 50px;
+}
+
+#next{
+  left: unset;
+  right: 50px;
+}
+
+.grafik{
+  text-decoration: none;
+  color: #fff;
+  padding: 0 1.5rem;
+  font-weight: bold;
+  font-size: 0.93rem;
+  background-color: #000;
+  border-radius: 20px;
+  margin:0 5px;
+  height: 50%;
+  padding: 6px 15px;
+  justify-content: center;
+  transition: .3s ease-in;
+}
+
+.grafik:hover{
+  background-color: #e6e1dd;
+  color: #000;
+}
+
+
+table, th, td {
+  border: 1px solid;
+}
+
